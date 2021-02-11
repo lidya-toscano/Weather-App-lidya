@@ -30,6 +30,9 @@ let month = months[now.getMonth()];
 let date = now.getDate();
 let hours = now.getHours();
 let mins = now.getMinutes();
+if (mins < 10) {
+  mins = `0${mins}`;
+}
 h4.innerHTML = `${day}, ${month} ${date} ${hours}:${mins}`;
 //Form Java
 function displayWeatherCondition(response) {
@@ -40,7 +43,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#humidity").innerHTML =
     "Humidity: " + response.data.main.humidity + "%";
   document.querySelector("#wind").innerHTML =
-    "Wind Speed: " + Math.round(response.data.wind.speed) + "Km";
+    "Wind Speed: " + Math.round(response.data.wind.speed) + "Km/h";
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 }

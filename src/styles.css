@@ -47,11 +47,8 @@ h5 a {
 /* Add Hover to Buttons */
 
 .container {
-  max-width: 80% !important;
   display: block;
-  margin: 0 auto !important;
-  /* Remove padding and center everything in the page */
-  padding: 100px;
+  margin: 0 auto;
 }
 
 .temp-today {
@@ -84,4 +81,9 @@ h5 a {
 .row.next {
   margin: 0 auto;
   text-align: center;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 30px auto;
 }
