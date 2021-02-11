@@ -1,6 +1,8 @@
 body {
-  background: #29aeeb !important;
   font-family: "Nunito", sans-serif !important;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 p.header {
@@ -37,8 +39,8 @@ h5 a {
 #current-button {
   border: solid 1 #000;
   border-radius: 30px;
-  background: transparent;
-  color: white;
+  background: white;
+  color: baclk;
   font-weight: bold;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -56,23 +58,26 @@ h5 a {
 }
 
 #city-input {
+  background: rgba(255, 255, 255, 0.95);
+  border: solid 2px black;
   border-radius: 40px;
-  border-width: 0;
   padding: 10px;
 }
 
 .col-md-12.today {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  border: solid 3px black;
   border-radius: 20px;
   display: block;
   margin: 0 auto;
-  text-align: center;
   max-width: 80%;
   padding: 50px 0 50px 0;
+  text-align: center;
 }
 
 .col-md-2.ms-auto {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  border: solid 3px black;
   border-radius: 20px;
   margin-top: 20px;
   padding: 25px 0 25px 0;
