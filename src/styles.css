@@ -1,7 +1,9 @@
 body {
   font-family: "Nunito", sans-serif !important;
-  background-image: url(../images/background.png);
-  background-repeat: no-repeat;
+  background-image: url(../images/background-2.png);
+  background-color: #00a8f4;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
 
@@ -19,7 +21,8 @@ h4 {
 
 h5 {
   color: white;
-  padding-top: 20px;
+  text-align: center;
+  padding-top: 30px;
 }
 
 h5 a {
@@ -46,8 +49,9 @@ h5 a {
   text-transform: uppercase;
 }
 
-/* Add Hover to Buttons */
-
+input {
+  width: 100%;
+}
 .container {
   display: block;
   margin: 0 auto;
@@ -70,7 +74,6 @@ h5 a {
   border-radius: 20px;
   display: block;
   margin: 0 auto;
-  max-width: 80%;
   padding: 50px 0 50px 0;
   text-align: center;
 }
@@ -84,7 +87,6 @@ h5 a {
 }
 
 .row.next {
-  margin: 0 auto;
   text-align: center;
 }
 

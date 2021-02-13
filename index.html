@@ -22,10 +22,12 @@
     <div class="wrapper">
       <p class="header">Lidya's Weather Channel</p>
       <div class="weather-app">
-        <div class="row">
-        
-            <div class="row"> <form class="search-form mb-3" id="search-form">
+        <div class="row mb-4">
+          <div class="col-10">
+          <form class="search-form" id="search-form"></form>
+            <div class="row">
               <div class="col-8">
+                         
                 <input 
                   type="search"
                   placeholder="Search for a city..."
@@ -33,27 +35,32 @@
                   autocomplete="off"
                 id="city-input"/>
               </div>
-             <div class="col-2"> 
-              <input 
-              type="submit"
-              value="search"
-              id="submit-button"/>
-            </div> 
-            
+             <div class="col-4"> 
+                <input 
+                  type="submit"
+                  value="search"
+                 id="submit-button"/>
+             </div>
+          </div>
           </form> 
-            <div class="col-2"> 
-              <form id="current-form">
-              <input 
-              type="submit"
-              value="current"
-              id="current-button"/>
+          </div>
+          <div class="col-2">
+      <form id="current-form">
+        <div class="row">
+            <div class="col-12"> 
+               <input 
+                 type="submit"
+                 value="current"
+                 id="current-button"/>
             </div>
-          </form>
+            </div>
+            </form>
+            </div>
            
       </div>
             </div>
-          </div>
-        </form>
+          
+
       
       <div class="row"> 
 
@@ -67,7 +74,7 @@
         <div class="wind-today" id="wind">Wind Speed: 10km</div>
         <div class="humidity-today" id="humidity">Humidity: 70%</div>
       </div>
-      <div class="row next">
+      <div class="row next" id=next-forecast>
       <div class="col-md-2 ms-auto">
         <div class="date-next">Wednesday</div> 
         <img src="images/angry-sun.png" alt="Current Temperature Icon" class="icon" width=30px >
@@ -97,12 +104,14 @@
         <img src="images/angry-sun.png" alt="Current Temperature Icon" class="icon" width=30px >
         <div class="temp-next">Max: 85°</div>
       </div>
+      </div>
         <h5><a href="https://github.com/lidya-toscano/Weather-App-lidya" target="_blank">Open-Source Code</a> by Lidya Toscano</h5>
     
-    </div>
+    
 
 </div>
     
+    </div>
     </div>
   </div>
   
