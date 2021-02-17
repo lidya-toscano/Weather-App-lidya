@@ -91,7 +91,7 @@ function handleSubmit(event) {
   if (city) {
     searchCity(city);
   } else {
-    //h2.innerHTML = null;
+    h2.innerHTML = null;
     alert("Please type something...");
   }
 }
