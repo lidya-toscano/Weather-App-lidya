@@ -8,8 +8,15 @@ body {
 }
 
 p.header {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0 0 30px 30px;
+  color: black;
+  display: block;
+  margin: 0 auto;
   font-size: 35px;
   font-weight: 600;
+  text-align: center;
+  max-width: 900px;
 }
 
 h2 {
@@ -26,7 +33,7 @@ h5 {
 }
 
 h5 a {
-  color: blue;
+  color: black;
 }
 
 #submit-button {
@@ -69,7 +76,7 @@ input {
 }
 
 .col-md-12.today {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(177, 234, 252, 0.85);
   border: solid 3px black;
   border-radius: 20px;
   display: block;
@@ -79,10 +86,10 @@ input {
 }
 
 .col-md-2.ms-auto {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(177, 234, 252, 0.85);
   border: solid 3px black;
   border-radius: 20px;
-  margin-top: 20px;
+  margin: 20px 2px 0 2px;
   padding: 25px 0 25px 0;
 }
 
@@ -93,4 +100,8 @@ input {
 .wrapper {
   max-width: 800px;
   margin: 30px auto;
+}
+
+.icon-next {
+  width: 50px;
 }
