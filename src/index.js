@@ -59,7 +59,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = "";
   let forecast = null;
   for (let index = 0; index < 5; index++) {
-    forecast = response.data.hourly[index];
+    forecast = response.data.list[index];
     forecastElement.innerHTML += `
 <div class="col-md-2 ms-auto">
 <div><strong>
@@ -69,7 +69,10 @@ ${displayHour(forecast.dt)}</strong>
 src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
 />
 <div>
-   Max: ${Math.round(forecast.temp)}°
+   Max: ${Math.round(forecast.main.temp_max)}°
+  </div>
+  <div>
+   Min: ${Math.round(forecast.main.temp_min)}°
   </div>
  </div>
  `;
@@ -81,7 +84,7 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?q=${city}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -97,11 +100,12 @@ function handleSubmit(event) {
 }
 
 function searchLocation(position) {
+  console.log("test");
   let apiKey = "3320ca0d42d8e30894a515d253ee5918";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
